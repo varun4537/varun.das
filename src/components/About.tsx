@@ -1,21 +1,24 @@
 'use client';
 
-import { MapPin, Coffee, Heart } from 'lucide-react';
+import { MapPin, Coffee } from 'lucide-react';
+import aboutFacts from '@/../content/about-facts.json';
+
+// Quick facts loaded from content/about-facts.json
 
 export default function About() {
     return (
-        <section id="about" className="section relative overflow-hidden">
+        <section id="about" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
             {/* Background image */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: 'url(/about-bg.png)' }}
             />
-            <div className="absolute inset-0 bg-background-primary/90" />
+            <div className="absolute inset-0 bg-background-primary/85" />
 
-            <div className="container-custom relative z-10">
+            <div className="container-custom relative z-10 px-6 md:px-12 lg:px-20">
                 <div className="max-w-4xl mx-auto">
                     {/* Section header */}
-                    <div className="mb-12">
+                    <div className="mb-12 text-center">
                         <span className="font-mono text-xs uppercase tracking-widest text-accent-teal mb-2 block">
                             The Longer Story
                         </span>
@@ -28,43 +31,48 @@ export default function About() {
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* Main content */}
                         <div className="md:col-span-2 space-y-6">
-                            <p className="text-lg text-text-secondary leading-relaxed">
-                                I&apos;m Varun — a curious explorer who&apos;s spent the last decade building
-                                partnerships and scaling businesses across continents. From managing{' '}
-                                <span className="text-accent-amber font-medium">$30M P&L at Flipkart</span>{' '}
-                                to launching my own e-commerce consulting practice, I&apos;ve worn many hats.
+                            <p className="text-lg text-white/90 leading-relaxed">
+                                I am Varun. For the past ten years, I have built partnerships and scaled
+                                businesses across continents. I now run an e-commerce consulting practice.
                             </p>
 
-                            <p className="text-lg text-text-secondary leading-relaxed">
-                                But the title on LinkedIn only tells half the story.
+                            <p className="text-lg text-white/70 leading-relaxed">
+                                But that is just the LinkedIn version.
                             </p>
 
-                            <p className="text-lg text-text-secondary leading-relaxed">
-                                I build things on weekends — tools to{' '}
-                                <a href="https://india-budget-explorer.vercel.app" target="_blank" rel="noopener noreferrer">
+                            <p className="text-lg text-white/90 leading-relaxed">
+                                On weekends, I build things: tools to{' '}
+                                <a
+                                    href="https://india-budget-explorer.vercel.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-accent-teal hover:underline"
+                                >
                                     explore government budgets
                                 </a>
                                 , apps to organize movie recommendations, Chrome extensions for mindful
-                                productivity. I photograph the everyday, write when thoughts demand
-                                release, and look up at the stars wondering what else is out there.
+                                productivity. I love photography and always try to find sublime in the
+                                mundane. I read whenever I get time. Mostly fiction, but occasionally
+                                non-fiction too! And in winters, you will find me under starry skies in
+                                Coorg, where I gaze upon the wonders of the night sky.
                             </p>
 
                             <div className="border-l-4 border-accent-teal pl-6 py-2 my-8">
-                                <p className="font-accent text-xl italic text-text-primary">
-                                    &quot;This space is where I share what I&apos;m learning, building, and
-                                    thinking about. It&apos;s less portfolio, more digital garden —
-                                    messy, growing, alive.&quot;
+                                <p className="font-accent text-xl italic text-white">
+                                    &quot;This space is where I share what I am learning and building.
+                                    It is less of a portfolio, more of a digital garden. Hopefully,
+                                    it will be messy, alive, and growing.&quot;
                                 </p>
                             </div>
 
-                            <p className="text-lg text-text-secondary leading-relaxed">
-                                If you&apos;re curious about e-commerce, vibe coding, or just want to
-                                swap book recommendations,{' '}
+                            <p className="text-lg text-white/90 leading-relaxed">
+                                Curious about e-commerce or vibe coding? Want to swap book recommendations?
+                                Discuss why we aren&apos;t really star dust, but perhaps we are?{' '}
                                 <a
                                     href="mailto:varundas4537@gmail.com"
-                                    className="text-accent-teal hover:underline"
+                                    className="text-accent-teal hover:underline font-medium"
                                 >
-                                    say hi
+                                    Just say hi
                                 </a>
                                 .
                             </p>
@@ -73,49 +81,38 @@ export default function About() {
                         {/* Sidebar */}
                         <div className="space-y-6">
                             {/* Quick facts card */}
-                            <div className="glass rounded-xl p-6">
-                                <h3 className="font-display text-lg font-semibold mb-4">
+                            <div className="glass rounded-xl p-6 shadow-floating">
+                                <h3 className="font-display text-lg font-semibold mb-4 text-white">
                                     Quick Facts
                                 </h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-3">
                                         <MapPin className="w-5 h-5 text-accent-teal flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <p className="text-text-primary font-medium">Based in</p>
-                                            <p className="text-text-secondary text-sm">Iselin, New Jersey</p>
+                                            <p className="text-white font-medium">Based in</p>
+                                            <p className="text-white/70 text-sm">{aboutFacts.location}</p>
                                         </div>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Coffee className="w-5 h-5 text-accent-amber flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <p className="text-text-primary font-medium">Current Role</p>
-                                            <p className="text-text-secondary text-sm">
-                                                Co-founder, EndtoEnd Ecommerce
+                                            <p className="text-white font-medium">Current Role</p>
+                                            <p className="text-white/70 text-sm">
+                                                {aboutFacts.roleLink ? (
+                                                    <a
+                                                        href={aboutFacts.roleLink}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="hover:text-accent-teal transition-colors"
+                                                    >
+                                                        {aboutFacts.role}
+                                                    </a>
+                                                ) : (
+                                                    aboutFacts.role
+                                                )}
                                             </p>
                                         </div>
                                     </li>
-                                    <li className="flex items-start gap-3">
-                                        <Heart className="w-5 h-5 text-accent-coral flex-shrink-0 mt-0.5" />
-                                        <div>
-                                            <p className="text-text-primary font-medium">Passionate About</p>
-                                            <p className="text-text-secondary text-sm">
-                                                Building tools that make complex things accessible
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Background */}
-                            <div className="glass rounded-xl p-6">
-                                <h3 className="font-display text-lg font-semibold mb-4">
-                                    Background
-                                </h3>
-                                <ul className="space-y-2 text-sm text-text-secondary">
-                                    <li>📍 Originally from India</li>
-                                    <li>🎓 PGDM, IMT Ghaziabad</li>
-                                    <li>🔧 Mechanical Engineering background</li>
-                                    <li>🌏 Worked across US, Canada, India, Middle East</li>
                                 </ul>
                             </div>
                         </div>

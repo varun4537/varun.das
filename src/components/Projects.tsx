@@ -93,24 +93,24 @@ export default function Projects() {
     }
 
     return (
-        <section id="projects" className="section relative overflow-hidden">
-            {/* Background image */}
+        <section id="projects" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
+            {/* Background image - full bleed */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: 'url(/projects-bg.png)' }}
             />
-            <div className="absolute inset-0 bg-background-primary/85" />
+            <div className="absolute inset-0 bg-background-primary/75" />
 
-            <div className="container-custom relative z-10">
+            <div className="container-custom relative z-10 px-6 md:px-12 lg:px-20">
                 {/* Section header */}
-                <div className="mb-12">
+                <div className="mb-12 text-center">
                     <span className="font-mono text-xs uppercase tracking-widest text-accent-teal mb-2 block">
                         What I&apos;m Building
                     </span>
                     <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                         Projects
                     </h2>
-                    <p className="text-text-secondary text-lg max-w-2xl">
+                    <p className="text-white/70 text-lg max-w-2xl mx-auto">
                         Ideas brought to life through code. Each project started with a question
                         and ended up teaching me something new.
                     </p>

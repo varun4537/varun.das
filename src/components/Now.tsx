@@ -1,39 +1,22 @@
 'use client';
 
 import { Sparkles, Clock } from 'lucide-react';
+import nowContent from '@/../content/now.json';
 
-// Current activities - edit this to update the "Now" section
-const currentActivities = {
-    lastUpdated: 'January 2026',
-    building: [
-        {
-            title: 'India Budget Explorer',
-            description: 'Making government spending data accessible and understandable for everyone.',
-        },
-        {
-            title: 'Bookmark Organizer',
-            description: 'A cross-platform tool to organize saved content for easier learning and discovery.',
-        },
-    ],
-    learning: [
-        'Vibe coding and AI-assisted development',
-        'Data visualization techniques',
-        'Building in public',
-    ],
-    reading: 'Various articles on product thinking and technology trends',
-};
+// Content is loaded from content/now.json - edit that file to update this section
 
 export default function Now() {
     return (
-        <section id="now" className="section relative overflow-hidden">
-            {/* Background image */}
+        <section id="now" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32 bg-[#0a0a0a]">
+            {/* Background image - full bleed */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: 'url(/now-bg.png)' }}
             />
-            <div className="absolute inset-0 bg-background-secondary/85" />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-background-primary/80" />
 
-            <div className="container-custom relative z-10">
+            <div className="container-custom relative z-10 px-6 md:px-12 lg:px-20">
                 <div className="max-w-3xl mx-auto">
                     {/* Section header */}
                     <div className="mb-10 text-center">
@@ -43,7 +26,7 @@ export default function Now() {
                         <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                             What I&apos;m Up To
                         </h2>
-                        <p className="text-text-secondary text-lg">
+                        <p className="text-white/70 text-lg">
                             A snapshot of my current focus, updated regularly.
                         </p>
                     </div>
@@ -54,7 +37,7 @@ export default function Now() {
                         <div className="flex items-center gap-2 text-text-tertiary mb-8">
                             <Clock className="w-4 h-4" />
                             <span className="font-mono text-sm">
-                                Last updated: {currentActivities.lastUpdated}
+                                Last updated: {nowContent.lastUpdated}
                             </span>
                         </div>
 
@@ -65,7 +48,7 @@ export default function Now() {
                                 Building
                             </h3>
                             <div className="space-y-4">
-                                {currentActivities.building.map((item) => (
+                                {nowContent.building.map((item) => (
                                     <div
                                         key={item.title}
                                         className="p-4 bg-background-tertiary/50 rounded-lg border border-border-subtle"
@@ -87,7 +70,7 @@ export default function Now() {
                                 📚 Learning
                             </h3>
                             <ul className="space-y-2">
-                                {currentActivities.learning.map((item, index) => (
+                                {nowContent.learning.map((item, index) => (
                                     <li
                                         key={index}
                                         className="flex items-start gap-3 text-text-secondary"
@@ -105,7 +88,7 @@ export default function Now() {
                                 📖 Reading
                             </h3>
                             <p className="text-text-secondary italic font-accent">
-                                {currentActivities.reading}
+                                {nowContent.reading}
                             </p>
                         </div>
                     </div>

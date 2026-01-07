@@ -1,0 +1,19 @@
+{
+    "lastUpdated": "January 2026",
+    "building": [
+        {
+            "title": "India Budget Explorer",
+            "description": "Making government spending data accessible and understandable for everyone."
+        },
+        {
+            "title": "Bookmark Organizer",
+            "description": "A cross-platform tool to organize saved content for easier learning and discovery."
+        }
+    ],
+    "learning": [
+        "Vibe coding and AI-assisted development",
+        "Data visualization techniques",
+        "Building in public"
+    ],
+    "reading": "Various articles on product thinking and technology trends"
+}

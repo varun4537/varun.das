@@ -1,0 +1,32 @@
+{
+    "interests": [
+        {
+            "id": "vibe-coding",
+            "title": "Vibe Coding",
+            "description": "Exploring the intersection of AI and creative development, building tools that feel intuitive.",
+            "icon": "Code2",
+            "gradient": "from-purple-500/20 to-pink-500/20"
+        },
+        {
+            "id": "astronomy",
+            "title": "Astronomy",
+            "description": "Night sky photography and the endless wonder of what lies beyond our atmosphere.",
+            "icon": "Telescope",
+            "gradient": "from-blue-500/20 to-indigo-500/20"
+        },
+        {
+            "id": "photography",
+            "title": "Photography",
+            "description": "Capturing moments, experimenting with long exposures, and telling stories through images.",
+            "icon": "Camera",
+            "gradient": "from-amber-500/20 to-orange-500/20"
+        },
+        {
+            "id": "ecommerce",
+            "title": "E-commerce",
+            "description": "Building digital experiences that connect products with people in meaningful ways.",
+            "icon": "ShoppingCart",
+            "gradient": "from-teal-500/20 to-emerald-500/20"
+        }
+    ]
+}

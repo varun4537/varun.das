@@ -1,0 +1,23 @@
+{
+    "weekOf": "January 6, 2026",
+    "items": [
+        {
+            "title": "The Art of Finishing",
+            "url": "https://example.com/finishing",
+            "type": "article",
+            "commentary": "A great piece on why shipping imperfect work beats endless polishing."
+        },
+        {
+            "title": "Building in Public",
+            "url": "https://example.com/building-public",
+            "type": "video",
+            "commentary": "Inspiring talk about transparency in the creative process."
+        },
+        {
+            "title": "Cursor AI Editor",
+            "url": "https://cursor.sh",
+            "type": "tool",
+            "commentary": "Game-changing AI code editor that's transformed my workflow."
+        }
+    ]
+}

@@ -1,49 +1,34 @@
 'use client';
 
-import { Code2, Camera, Telescope, ShoppingCart } from 'lucide-react';
+import { Code2, Camera, Telescope, ShoppingCart, Sparkles, Stars, ShoppingBag, LucideIcon } from 'lucide-react';
+import interestsContent from '@/../content/interests.json';
 
-const interests = [
-    {
-        title: 'Vibe Coding',
-        description: 'Building tools that feel good to use. Exploring AI-assisted development and turning ideas into working prototypes.',
-        icon: Code2,
-        color: 'from-blue-500/20 to-purple-500/20',
-        borderColor: 'hover:border-blue-500/50',
-    },
-    {
-        title: 'Astronomy',
-        description: 'Gazing at the night sky, wondering about our place in the cosmos. The universe has a way of putting things in perspective.',
-        icon: Telescope,
-        color: 'from-indigo-500/20 to-cyan-500/20',
-        borderColor: 'hover:border-indigo-500/50',
-    },
-    {
-        title: 'Photography',
-        description: 'Capturing everyday moments through a lens. Finding beauty in the ordinary and stories in the mundane.',
-        icon: Camera,
-        color: 'from-amber-500/20 to-orange-500/20',
-        borderColor: 'hover:border-amber-500/50',
-    },
-    {
-        title: 'E-commerce',
-        description: 'A decade of building partnerships and scaling businesses across continents. From $30M P&L at Flipkart to founding my own consultancy.',
-        icon: ShoppingCart,
-        color: 'from-teal-500/20 to-green-500/20',
-        borderColor: 'hover:border-teal-500/50',
-    },
+// Icon mapping - add new icons here as needed
+const iconMap: Record<string, LucideIcon> = {
+    Code2, Camera, Telescope, ShoppingCart, Sparkles, Stars, ShoppingBag
+};
+
+// Color presets for interests
+const colorPresets = [
+    { color: 'from-blue-500/20 to-purple-500/20', borderColor: 'hover:border-blue-500/50' },
+    { color: 'from-indigo-500/20 to-cyan-500/20', borderColor: 'hover:border-indigo-500/50' },
+    { color: 'from-amber-500/20 to-orange-500/20', borderColor: 'hover:border-amber-500/50' },
+    { color: 'from-teal-500/20 to-green-500/20', borderColor: 'hover:border-teal-500/50' },
 ];
+
+// Content loaded from content/interests.json
 
 export default function Interests() {
     return (
-        <section id="interests" className="section relative overflow-hidden">
-            {/* Background image */}
+        <section id="interests" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
+            {/* Background image - full bleed */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: 'url(/interests-bg.png)' }}
             />
-            <div className="absolute inset-0 bg-background-secondary/85" />
+            <div className="absolute inset-0 bg-background-primary/70" />
 
-            <div className="container-custom relative z-10">
+            <div className="container-custom relative z-10 px-6 md:px-12 lg:px-20">
                 {/* Section header */}
                 <div className="mb-16 text-center">
                     <span className="font-mono text-sm uppercase tracking-widest text-accent-amber mb-4 block">
@@ -60,38 +45,42 @@ export default function Interests() {
 
                 {/* Interests grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    {interests.map((interest, index) => (
-                        <article
-                            key={interest.title}
-                            className={`group relative overflow-hidden rounded-xl glass p-8 transition-all duration-300 hover:-translate-y-2 shadow-floating hover:shadow-glow ${interest.borderColor}`}
-                            style={{
-                                animationDelay: `${index * 100}ms`,
-                            }}
-                        >
-                            {/* Background gradient */}
-                            <div
-                                className={`absolute inset-0 bg-gradient-to-br ${interest.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                            />
+                    {interestsContent.interests.map((interest, index) => {
+                        const IconComponent = iconMap[interest.icon] || Code2;
+                        const colors = colorPresets[index % colorPresets.length];
+                        return (
+                            <article
+                                key={interest.id}
+                                className={`group relative overflow-hidden rounded-xl glass p-8 transition-all duration-300 hover:-translate-y-2 shadow-floating hover:shadow-glow ${colors.borderColor}`}
+                                style={{
+                                    animationDelay: `${index * 100}ms`,
+                                }}
+                            >
+                                {/* Background gradient */}
+                                <div
+                                    className={`absolute inset-0 bg-gradient-to-br ${colors.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                                />
 
-                            {/* Content */}
-                            <div className="relative z-10">
-                                {/* Icon */}
-                                <div className="mb-6 inline-flex p-4 rounded-xl bg-background-tertiary border border-border-subtle group-hover:border-accent-teal/30 transition-colors">
-                                    <interest.icon className="w-8 h-8 text-accent-teal" />
+                                {/* Content */}
+                                <div className="relative z-10">
+                                    {/* Icon */}
+                                    <div className="mb-6 inline-flex p-4 rounded-xl bg-background-tertiary border border-border-subtle group-hover:border-accent-teal/30 transition-colors">
+                                        <IconComponent className="w-8 h-8 text-accent-teal" />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="font-display text-2xl font-semibold mb-3">
+                                        {interest.title}
+                                    </h3>
+
+                                    {/* Description */}
+                                    <p className="text-text-secondary leading-relaxed">
+                                        {interest.description}
+                                    </p>
                                 </div>
-
-                                {/* Title */}
-                                <h3 className="font-display text-2xl font-semibold mb-3">
-                                    {interest.title}
-                                </h3>
-
-                                {/* Description */}
-                                <p className="text-text-secondary leading-relaxed">
-                                    {interest.description}
-                                </p>
-                            </div>
-                        </article>
-                    ))}
+                            </article>
+                        );
+                    })}
                 </div>
             </div>
         </section>
