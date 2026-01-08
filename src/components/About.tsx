@@ -87,14 +87,14 @@ export default function About() {
                                 </h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-3">
-                                        <MapPin className="w-5 h-5 text-accent-teal flex-shrink-0 mt-0.5" />
+                                        <MapPin className="w-5 h-5 text-accent-teal flex-shrink-0 mt-0.5" aria-hidden="true" />
                                         <div>
                                             <p className="text-white font-medium">Based in</p>
                                             <p className="text-white/70 text-sm">{aboutFacts.location}</p>
                                         </div>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <Coffee className="w-5 h-5 text-accent-amber flex-shrink-0 mt-0.5" />
+                                        <Coffee className="w-5 h-5 text-accent-amber flex-shrink-0 mt-0.5" aria-hidden="true" />
                                         <div>
                                             <p className="text-white font-medium">Current Role</p>
                                             <p className="text-white/70 text-sm">

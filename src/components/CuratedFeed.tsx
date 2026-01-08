@@ -88,7 +88,10 @@ export default function CuratedFeed() {
                     <div className="mt-12 text-center">
                         <a
                             href="/curated"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-accent-coral text-white hover:text-accent-coral rounded-lg font-medium transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-background-tertiary/90 backdrop-blur-md border-2 border-accent-coral hover:bg-accent-coral rounded-lg font-medium transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow"
+                            style={{ color: 'white' }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = '#0a0a0a'}
+                            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                         >
                             View All Recommendations
                             <ArrowRight className="w-4 h-4" />

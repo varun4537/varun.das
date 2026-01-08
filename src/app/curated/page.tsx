@@ -49,7 +49,7 @@ export default function CuratedArchive() {
     const totalItems = curatedContent.weeks.reduce((acc, week) => acc + week.items.length, 0);
 
     return (
-        <main className="min-h-screen relative pt-24 pb-20">
+        <main id="main-content" className="min-h-screen relative pt-24 pb-20">
             {/* Background image */}
             <div
                 className="fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -75,7 +75,7 @@ export default function CuratedArchive() {
                     <h1 className="font-display text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-bold mb-4 text-white tracking-[-0.02em] leading-none">
                         Curated Recommendations
                     </h1>
-                    <p className="text-white/70 text-lg max-w-2xl mx-auto">
+                    <p className="text-text-secondary text-lg max-w-2xl mx-auto">
                         A collection of articles, videos, and tools I&apos;ve found interesting.
                         {' '}<span className="text-text-tertiary">{totalItems} items across {curatedContent.weeks.length} weeks.</span>
                     </p>
@@ -84,7 +84,7 @@ export default function CuratedArchive() {
                 {/* Filters */}
                 <div className="mb-10">
                     <div className="flex items-center gap-2 mb-4">
-                        <Filter className="w-4 h-4 text-text-tertiary" />
+                        <Filter className="w-4 h-4 text-text-tertiary" aria-hidden="true" />
                         <span className="text-sm text-text-tertiary">Filter by:</span>
                     </div>
 
@@ -143,7 +143,7 @@ export default function CuratedArchive() {
                         <div key={weekIndex}>
                             {/* Week header */}
                             <div className="flex items-center gap-3 mb-6">
-                                <Calendar className="w-5 h-5 text-accent-teal" />
+                                <Calendar className="w-5 h-5 text-accent-teal" aria-hidden="true" />
                                 <h2 className="font-display text-xl font-semibold text-white">
                                     Week of {week.weekOf}
                                 </h2>

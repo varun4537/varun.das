@@ -110,7 +110,7 @@ export default function Projects() {
                     <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                         Projects
                     </h2>
-                    <p className="text-white/70 text-lg max-w-2xl mx-auto">
+                    <p className="text-text-secondary text-lg max-w-2xl mx-auto">
                         Ideas brought to life through code. Each project started with a question
                         and ended up teaching me something new.
                     </p>
@@ -206,7 +206,10 @@ export default function Projects() {
                         href="https://github.com/varun4537?tab=repositories"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-accent-teal text-white hover:text-accent-teal rounded-lg font-medium transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-background-tertiary/90 backdrop-blur-md border-2 border-accent-teal hover:bg-accent-teal rounded-lg font-medium transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow"
+                        style={{ color: 'white' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = '#0a0a0a'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                     >
                         View All Projects
                         <ExternalLink className="w-4 h-4" />

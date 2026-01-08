@@ -37,7 +37,7 @@ export default function Interests() {
                     <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                         What Interests Me
                     </h2>
-                    <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">
+                    <p className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto">
                         The threads that connect my curiosities. Some for work, some for wonder,
                         all feeding into how I see the world.
                     </p>

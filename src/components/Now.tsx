@@ -26,7 +26,7 @@ export default function Now() {
                         <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                             What I&apos;m Up To
                         </h2>
-                        <p className="text-white/70 text-lg">
+                        <p className="text-text-secondary text-lg">
                             A snapshot of my current focus, updated regularly.
                         </p>
                     </div>
@@ -35,7 +35,7 @@ export default function Now() {
                     <div className="glass rounded-2xl p-8 md:p-10 shadow-floating">
                         {/* Last updated */}
                         <div className="flex items-center gap-2 text-text-tertiary mb-8">
-                            <Clock className="w-4 h-4" />
+                            <Clock className="w-4 h-4" aria-hidden="true" />
                             <span className="font-mono text-sm">
                                 Last updated: {nowContent.lastUpdated}
                             </span>
@@ -44,7 +44,7 @@ export default function Now() {
                         {/* Building */}
                         <div className="mb-8">
                             <h3 className="font-display text-xl font-semibold mb-4 flex items-center gap-2">
-                                <Sparkles className="w-5 h-5 text-accent-teal" />
+                                <Sparkles className="w-5 h-5 text-accent-teal" aria-hidden="true" />
                                 Building
                             </h3>
                             <div className="space-y-4">

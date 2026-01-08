@@ -61,7 +61,7 @@ export default function Contact() {
                         <h2 className="font-display text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                             Get in Touch
                         </h2>
-                        <p className="text-white/70 text-lg">
+                        <p className="text-text-secondary text-lg">
                             Have a question, want to collaborate, or just want to say hi?
                             Drop me a message below.
                         </p>
@@ -74,7 +74,7 @@ export default function Contact() {
                             <h3 className="font-display text-2xl font-semibold mb-2 text-white">
                                 Message Sent!
                             </h3>
-                            <p className="text-white/70 mb-6">
+                            <p className="text-text-secondary mb-6">
                                 Thanks for reaching out. I&apos;ll get back to you soon.
                             </p>
                             <button
@@ -87,7 +87,7 @@ export default function Contact() {
                     ) : (
                         <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 md:p-12 shadow-floating">
                             {formState === 'error' && (
-                                <div className="flex items-center gap-3 p-4 mb-6 bg-red-500/10 border border-red-500/30 rounded-lg">
+                                <div role="alert" aria-live="polite" className="flex items-center gap-3 p-4 mb-6 bg-red-500/10 border border-red-500/30 rounded-lg">
                                     <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                                     <p className="text-red-400 text-sm">
                                         Something went wrong. Please try again or email me directly.

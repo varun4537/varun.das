@@ -46,7 +46,7 @@ export default function Footer() {
                                 href="#contact"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent-teal hover:bg-accent-teal-600 text-background-primary rounded-lg font-medium transition-all hover:-translate-y-1 hover:shadow-glow"
                             >
-                                <Mail className="w-5 h-5" />
+                                <Mail className="w-5 h-5" aria-hidden="true" />
                                 Get in Touch
                             </a>
                         </div>
@@ -79,7 +79,7 @@ export default function Footer() {
                             © {currentYear} Varun Das. All rights reserved.
                         </p>
                         <p className="flex items-center gap-1">
-                            Made with <Heart className="w-4 h-4 text-accent-coral fill-accent-coral" /> and curiosity
+                            Made with <Heart className="w-4 h-4 text-accent-coral fill-accent-coral" aria-hidden="true" /> and curiosity
                         </p>
                     </div>
                 </div>

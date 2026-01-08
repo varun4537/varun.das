@@ -106,7 +106,7 @@ export default function Blog() {
                     <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                         From the Blog
                     </h2>
-                    <p className="text-white/70 text-lg max-w-2xl mx-auto">
+                    <p className="text-text-secondary text-lg max-w-2xl mx-auto">
                         Thoughts on life, work, and everything in between. Short essays,
                         observations, and the occasional poem.
                     </p>
@@ -127,7 +127,7 @@ export default function Blog() {
                         >
                             {/* Date */}
                             <div className="flex items-center gap-2 text-text-tertiary mb-4">
-                                <Calendar className="w-4 h-4" />
+                                <Calendar className="w-4 h-4" aria-hidden="true" />
                                 <span className="font-mono text-xs">
                                     {formatDate(post.pubDate)}
                                 </span>
@@ -158,7 +158,10 @@ export default function Blog() {
                         href="https://betweenbeginningsblog.wordpress.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-accent-teal text-accent-teal hover:bg-accent-teal/10 rounded-lg font-medium transition-all hover:-translate-y-1"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-background-tertiary/90 backdrop-blur-md border-2 border-accent-teal hover:bg-accent-teal rounded-lg font-medium transition-all hover:-translate-y-1 shadow-lg hover:shadow-glow"
+                        style={{ color: 'white' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = '#0a0a0a'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                     >
                         View All Posts
                         <ArrowUpRight className="w-4 h-4" />

@@ -28,8 +28,8 @@ const config: Config = {
                 text: {
                     primary: "#f5f5f5",
                     secondary: "#b8b8b8",
-                    tertiary: "#808080",
-                    disabled: "#4a4a4a",
+                    tertiary: "#999999",
+                    disabled: "#666666",
                 },
                 accent: {
                     teal: {
@@ -37,13 +37,13 @@ const config: Config = {
                         100: "#b3e8e8",
                         200: "#80d9d9",
                         300: "#4dcaca",
-                        400: "#2eb8b8",
-                        500: "#1a9999",
-                        600: "#167d7d",
+                        400: "#33cccc",
+                        500: "#20b2b2",
+                        600: "#1a9999",
                         700: "#116161",
                         800: "#0d4545",
                         900: "#082929",
-                        DEFAULT: "#1a9999",
+                        DEFAULT: "#20b2b2",
                     },
                     blue: {
                         DEFAULT: "#3b82f6",
