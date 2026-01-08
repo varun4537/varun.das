@@ -88,7 +88,7 @@ export default function CuratedFeed() {
                     <div className="mt-12 text-center">
                         <a
                             href="/curated"
-                            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-accent-coral text-accent-coral hover:bg-accent-coral/10 rounded-lg font-medium transition-all hover:-translate-y-1"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-accent-coral text-white hover:text-accent-coral rounded-lg font-medium transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-glow"
                         >
                             View All Recommendations
                             <ArrowRight className="w-4 h-4" />

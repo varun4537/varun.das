@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Instagram, BookOpen, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Instagram, BookOpen, Film, ArrowDown } from 'lucide-react';
 
 const socialLinks = [
     {
@@ -22,6 +22,11 @@ const socialLinks = [
         name: 'Blog',
         href: 'https://betweenbeginningsblog.wordpress.com/',
         icon: BookOpen,
+    },
+    {
+        name: 'Letterboxd',
+        href: 'https://letterboxd.com/varun_begins/',
+        icon: Film,
     },
 ];
 

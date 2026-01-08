@@ -3,17 +3,18 @@
     "building": [
         {
             "title": "India Budget Explorer",
-            "description": "Making government spending data accessible and understandable for everyone."
+            "description": "Making government spending data accessible and understandable for everyone.",
+            "githubUrl": "https://github.com/varun4537/india-budget-explorer"
         },
         {
             "title": "Bookmark Organizer",
-            "description": "A cross-platform tool to organize saved content for easier learning and discovery."
+            "description": "A cross-platform tool to organize saved content for easier learning and discovery.",
+            "githubUrl": "https://github.com/varun4537/MyShelf"
         }
     ],
     "learning": [
         "Vibe coding and AI-assisted development",
         "Data visualization techniques",
         "Building in public"
-    ],
-    "reading": "Various articles on product thinking and technology trends"
+    ]
 }

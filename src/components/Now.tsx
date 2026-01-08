@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkles, Clock } from 'lucide-react';
+import { Sparkles, Clock, ExternalLink } from 'lucide-react';
 import nowContent from '@/../content/now.json';
 
 // Content is loaded from content/now.json - edit that file to update this section
@@ -49,17 +49,23 @@ export default function Now() {
                             </h3>
                             <div className="space-y-4">
                                 {nowContent.building.map((item) => (
-                                    <div
+                                    <a
                                         key={item.title}
-                                        className="p-4 bg-background-tertiary/50 rounded-lg border border-border-subtle"
+                                        href={item.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block p-4 bg-background-tertiary/50 rounded-lg border border-border-subtle hover:border-accent-teal/50 transition-all duration-300 group"
                                     >
-                                        <h4 className="font-semibold text-text-primary mb-1">
-                                            {item.title}
-                                        </h4>
+                                        <div className="flex items-start justify-between">
+                                            <h4 className="font-semibold text-text-primary mb-1 group-hover:text-accent-teal transition-colors">
+                                                {item.title}
+                                            </h4>
+                                            <ExternalLink className="w-4 h-4 text-text-tertiary group-hover:text-accent-teal transition-colors" />
+                                        </div>
                                         <p className="text-text-secondary text-sm">
                                             {item.description}
                                         </p>
-                                    </div>
+                                    </a>
                                 ))}
                             </div>
                         </div>
@@ -82,29 +88,7 @@ export default function Now() {
                             </ul>
                         </div>
 
-                        {/* Reading */}
-                        <div>
-                            <h3 className="font-display text-xl font-semibold mb-4">
-                                📖 Reading
-                            </h3>
-                            <p className="text-text-secondary italic font-accent">
-                                {nowContent.reading}
-                            </p>
-                        </div>
                     </div>
-
-                    {/* Note */}
-                    <p className="text-center text-text-tertiary text-sm mt-6">
-                        Inspired by{' '}
-                        <a
-                            href="https://nownownow.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-accent-teal hover:underline"
-                        >
-                            the /now page movement
-                        </a>
-                    </p>
                 </div>
             </div>
         </section>
