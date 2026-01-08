@@ -43,7 +43,7 @@ export default function Footer() {
                                 I&apos;d love to hear from you.
                             </p>
                             <a
-                                href="mailto:varundas4537@gmail.com"
+                                href="#contact"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent-teal hover:bg-accent-teal-600 text-background-primary rounded-lg font-medium transition-all hover:-translate-y-1 hover:shadow-glow"
                             >
                                 <Mail className="w-5 h-5" />

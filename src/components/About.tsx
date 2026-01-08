@@ -69,7 +69,7 @@ export default function About() {
                                 Curious about e-commerce or vibe coding? Want to swap book recommendations?
                                 Discuss why we aren&apos;t really star dust, but perhaps we are?{' '}
                                 <a
-                                    href="mailto:varundas4537@gmail.com"
+                                    href="#contact"
                                     className="text-accent-teal hover:underline font-medium"
                                 >
                                     Just say hi

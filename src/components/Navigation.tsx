@@ -75,7 +75,7 @@ export default function Navigation() {
 
                         {/* CTA */}
                         <a
-                            href="mailto:varundas4537@gmail.com"
+                            href="#contact"
                             className="hidden md:inline-flex px-5 py-2.5 bg-accent-teal hover:bg-accent-teal-600 text-background-primary text-sm font-medium rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-glow"
                         >
                             Get in Touch
@@ -97,9 +97,9 @@ export default function Navigation() {
                 </nav>
             </header>
 
-            {/* Mobile menu - fullscreen solid overlay */}
+            {/* Mobile menu - fullscreen glassmorphic overlay */}
             {isMobileMenuOpen && (
-                <div className="md:hidden fixed inset-0 z-[60] bg-[#0a0a0f]">
+                <div className="md:hidden fixed inset-0 z-[60] bg-background-primary/95 backdrop-blur-xl">
                     {/* Header strip to match navbar */}
                     <div className="h-20 flex items-center justify-between px-6">
                         <span className="font-display text-xl font-bold text-white">VD</span>
@@ -129,7 +129,7 @@ export default function Navigation() {
                         </ul>
                         <div className="mt-8 pt-8 border-t border-white/10">
                             <a
-                                href="mailto:varundas4537@gmail.com"
+                                href="#contact"
                                 onClick={handleLinkClick}
                                 className="inline-flex w-full justify-center px-6 py-4 bg-accent-teal hover:bg-accent-teal-600 text-background-primary font-medium rounded-lg transition-all"
                             >

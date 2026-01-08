@@ -1,6 +1,6 @@
 'use client';
 
-import { Link2, Video, Wrench, Calendar, LucideIcon } from 'lucide-react';
+import { Link2, Video, Wrench, Calendar, ArrowRight, LucideIcon } from 'lucide-react';
 import curatedContent from '@/../content/curated.json';
 
 // Icon mapping for recommendation types
@@ -10,7 +10,8 @@ const iconMap: Record<string, LucideIcon> = {
     tool: Wrench,
 };
 
-// Content loaded from content/curated.json
+// Get latest week from archive
+const latestWeek = curatedContent.weeks[0];
 
 export default function CuratedFeed() {
     return (
@@ -34,13 +35,13 @@ export default function CuratedFeed() {
                         </h2>
                         <div className="flex items-center justify-center gap-2 text-white/60">
                             <Calendar className="w-4 h-4" />
-                            <span className="font-mono text-sm">Week of {curatedContent.weekOf}</span>
+                            <span className="font-mono text-sm">Week of {latestWeek.weekOf}</span>
                         </div>
                     </div>
 
                     {/* Recommendations */}
                     <div className="space-y-6">
-                        {curatedContent.items.map((item, index) => {
+                        {latestWeek.items.map((item, index) => {
                             const IconComponent = iconMap[item.type] || Link2;
                             return (
                                 <article
@@ -83,12 +84,15 @@ export default function CuratedFeed() {
                         })}
                     </div>
 
-                    {/* Coming soon note */}
+                    {/* View all link */}
                     <div className="mt-12 text-center">
-                        <p className="text-text-tertiary text-sm">
-                            Check back weekly for new recommendations.
-                            <span className="text-accent-teal ml-1">Subscribe coming soon.</span>
-                        </p>
+                        <a
+                            href="/curated"
+                            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-accent-coral text-accent-coral hover:bg-accent-coral/10 rounded-lg font-medium transition-all hover:-translate-y-1"
+                        >
+                            View All Recommendations
+                            <ArrowRight className="w-4 h-4" />
+                        </a>
                     </div>
                 </div>
             </div>

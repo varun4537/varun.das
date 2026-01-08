@@ -1,23 +1,89 @@
 {
-    "weekOf": "January 6, 2026",
-    "items": [
+    "weeks": [
         {
-            "title": "The Art of Finishing",
-            "url": "https://example.com/finishing",
-            "type": "article",
-            "commentary": "A great piece on why shipping imperfect work beats endless polishing."
+            "weekOf": "January 6, 2026",
+            "items": [
+                {
+                    "title": "The Art of Finishing",
+                    "url": "https://example.com/finishing",
+                    "type": "article",
+                    "topics": [
+                        "productivity",
+                        "creativity"
+                    ],
+                    "commentary": "A great piece on why shipping imperfect work beats endless polishing."
+                },
+                {
+                    "title": "Building in Public",
+                    "url": "https://example.com/building-public",
+                    "type": "video",
+                    "topics": [
+                        "entrepreneurship",
+                        "transparency"
+                    ],
+                    "commentary": "Inspiring talk about transparency in the creative process."
+                },
+                {
+                    "title": "Cursor AI Editor",
+                    "url": "https://cursor.sh",
+                    "type": "tool",
+                    "topics": [
+                        "ai",
+                        "development"
+                    ],
+                    "commentary": "Game-changing AI code editor that's transformed my workflow."
+                }
+            ]
         },
         {
-            "title": "Building in Public",
-            "url": "https://example.com/building-public",
-            "type": "video",
-            "commentary": "Inspiring talk about transparency in the creative process."
+            "weekOf": "December 30, 2025",
+            "items": [
+                {
+                    "title": "Why We Sleep",
+                    "url": "https://example.com/sleep",
+                    "type": "article",
+                    "topics": [
+                        "health",
+                        "science"
+                    ],
+                    "commentary": "Eye-opening research on the importance of sleep for creativity and memory."
+                },
+                {
+                    "title": "The Mom Test",
+                    "url": "https://example.com/mom-test",
+                    "type": "article",
+                    "topics": [
+                        "entrepreneurship",
+                        "product"
+                    ],
+                    "commentary": "How to talk to customers and learn if your business idea is good."
+                }
+            ]
         },
         {
-            "title": "Cursor AI Editor",
-            "url": "https://cursor.sh",
-            "type": "tool",
-            "commentary": "Game-changing AI code editor that's transformed my workflow."
+            "weekOf": "December 23, 2025",
+            "items": [
+                {
+                    "title": "Obsidian",
+                    "url": "https://obsidian.md",
+                    "type": "tool",
+                    "topics": [
+                        "productivity",
+                        "knowledge"
+                    ],
+                    "commentary": "Finally found my forever note-taking app. The graph view is addictive."
+                },
+                {
+                    "title": "How to Do Great Work",
+                    "url": "https://example.com/great-work",
+                    "type": "article",
+                    "topics": [
+                        "productivity",
+                        "career"
+                    ],
+                    "commentary": "Paul Graham's essay on finding and doing meaningful work."
+                }
+            ]
         }
     ]
 }

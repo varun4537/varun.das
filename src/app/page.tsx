@@ -6,6 +6,7 @@ import Interests from '@/components/Interests';
 import CuratedFeed from '@/components/CuratedFeed';
 import Blog from '@/components/Blog';
 import About from '@/components/About';
+import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <CuratedFeed />
         <Blog />
         <About />
+        <Contact />
       </main>
       <Footer />
     </>
