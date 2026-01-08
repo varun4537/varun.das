@@ -58,19 +58,17 @@ export default function Hero() {
                 <div className="max-w-5xl animate-slide-up">
                     {/* Name */}
                     <h1 className="font-display text-[3.5rem] md:text-[5rem] lg:text-[7rem] font-bold tracking-[-0.03em] leading-none mb-6 text-white drop-shadow-lg">
-                        Varun Das
+                        Hi! I am Varun.
                     </h1>
 
                     {/* Tagline */}
                     <p className="font-accent text-2xl md:text-3xl lg:text-4xl text-white/90 italic mb-8 drop-shadow-md">
-                        Curious wanderer. Building things. Asking questions.
+                        Curious about a lot of things.
                     </p>
 
                     {/* Intro */}
                     <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-12 leading-relaxed drop-shadow-sm">
-                        I spend my days navigating e-commerce strategies and my nights exploring
-                        the cosmos through a lens. Welcome to my corner of the internet, where
-                        curiosity meets creation.
+                        Welcome to my corner of the internet.
                     </p>
 
                     {/* Social links */}

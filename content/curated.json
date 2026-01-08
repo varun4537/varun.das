@@ -4,34 +4,37 @@
             "weekOf": "January 6, 2026",
             "items": [
                 {
-                    "title": "The Art of Finishing",
-                    "url": "https://example.com/finishing",
+                    "title": "How Not To Sort By Average Rating",
+                    "url": "https://www.evanmiller.org/how-not-to-sort-by-average-rating.html",
                     "type": "article",
                     "topics": [
-                        "productivity",
-                        "creativity"
+                        "statistics",
+                        "algorithms",
+                        "product"
                     ],
-                    "commentary": "A great piece on why shipping imperfect work beats endless polishing."
+                    "commentary": ""
                 },
                 {
-                    "title": "Building in Public",
-                    "url": "https://example.com/building-public",
-                    "type": "video",
+                    "title": "Distinct AI Models Converge On How They Encode Reality",
+                    "url": "https://www.quantamagazine.org/distinct-ai-models-seem-to-converge-on-how-they-encode-reality-20260107/",
+                    "type": "article",
                     "topics": [
-                        "entrepreneurship",
-                        "transparency"
+                        "ai",
+                        "philosophy",
+                        "science"
                     ],
-                    "commentary": "Inspiring talk about transparency in the creative process."
+                    "commentary": ""
                 },
                 {
-                    "title": "Cursor AI Editor",
-                    "url": "https://cursor.sh",
+                    "title": "Production-Grade Agentic System",
+                    "url": "https://github.com/FareedKhan-dev/production-grade-agentic-system",
                     "type": "tool",
                     "topics": [
                         "ai",
+                        "vibe-coding",
                         "development"
                     ],
-                    "commentary": "Game-changing AI code editor that's transformed my workflow."
+                    "commentary": ""
                 }
             ]
         },

@@ -28,10 +28,10 @@ export default function CuratedFeed() {
                     {/* Section header */}
                     <div className="mb-12 text-center">
                         <span className="font-mono text-xs uppercase tracking-widest text-accent-coral mb-2 block">
-                            Weekly Picks
+                            What I&apos;m Into
                         </span>
                         <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
-                            Things I&apos;m Finding Interesting
+                            Recent Reads
                         </h2>
                         <div className="flex items-center justify-center gap-2 text-white/60">
                             <Calendar className="w-4 h-4" />
@@ -74,9 +74,23 @@ export default function CuratedFeed() {
                                             </h3>
 
                                             {/* Commentary */}
-                                            <p className="text-text-secondary italic font-accent">
+                                            <p className="text-text-secondary italic font-accent mb-3">
                                                 &quot;{item.commentary}&quot;
                                             </p>
+
+                                            {/* Tags */}
+                                            {item.topics && item.topics.length > 0 && (
+                                                <div className="flex flex-wrap gap-2">
+                                                    {item.topics.map((topic: string) => (
+                                                        <span
+                                                            key={topic}
+                                                            className="text-xs px-2 py-1 rounded-full bg-background-tertiary/50 text-text-tertiary border border-border-subtle"
+                                                        >
+                                                            {topic}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </article>
@@ -93,7 +107,7 @@ export default function CuratedFeed() {
                             onMouseEnter={(e) => e.currentTarget.style.color = '#0a0a0a'}
                             onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                         >
-                            View All Recommendations
+                            View All Reads
                             <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>

@@ -1,22 +1,12 @@
 'use client';
 
-import { Code2, Camera, Telescope, ShoppingCart, Sparkles, Stars, ShoppingBag, LucideIcon } from 'lucide-react';
+import { Code2, Camera, Telescope, ShoppingCart, Rocket, Brain, Lightbulb, Landmark, BookOpen, LucideIcon } from 'lucide-react';
 import interestsContent from '@/../content/interests.json';
 
 // Icon mapping - add new icons here as needed
 const iconMap: Record<string, LucideIcon> = {
-    Code2, Camera, Telescope, ShoppingCart, Sparkles, Stars, ShoppingBag
+    Code2, Camera, Telescope, ShoppingCart, Rocket, Brain, Lightbulb, Landmark, BookOpen
 };
-
-// Color presets for interests
-const colorPresets = [
-    { color: 'from-blue-500/20 to-purple-500/20', borderColor: 'hover:border-blue-500/50' },
-    { color: 'from-indigo-500/20 to-cyan-500/20', borderColor: 'hover:border-indigo-500/50' },
-    { color: 'from-amber-500/20 to-orange-500/20', borderColor: 'hover:border-amber-500/50' },
-    { color: 'from-teal-500/20 to-green-500/20', borderColor: 'hover:border-teal-500/50' },
-];
-
-// Content loaded from content/interests.json
 
 export default function Interests() {
     return (
@@ -30,7 +20,7 @@ export default function Interests() {
 
             <div className="container-custom relative z-10 px-6 md:px-12 lg:px-20">
                 {/* Section header */}
-                <div className="mb-16 text-center">
+                <div className="mb-12 text-center">
                     <span className="font-mono text-sm uppercase tracking-widest text-accent-amber mb-4 block">
                         Areas of Focus
                     </span>
@@ -38,46 +28,37 @@ export default function Interests() {
                         What Interests Me
                     </h2>
                     <p className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto">
-                        The threads that connect my curiosities. Some for work, some for wonder,
-                        all feeding into how I see the world.
+                        The threads that connect my curiosities.
                     </p>
                 </div>
 
-                {/* Interests grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                {/* Interests grid - compact floating tiles */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
                     {interestsContent.interests.map((interest, index) => {
                         const IconComponent = iconMap[interest.icon] || Code2;
-                        const colors = colorPresets[index % colorPresets.length];
                         return (
                             <article
                                 key={interest.id}
-                                className={`group relative overflow-hidden rounded-xl glass p-8 transition-all duration-300 hover:-translate-y-2 shadow-floating hover:shadow-glow ${colors.borderColor}`}
+                                className="group relative overflow-hidden rounded-xl bg-background-tertiary/95 backdrop-blur-sm p-5 transition-all duration-300 hover:-translate-y-2 border border-border-subtle hover:border-accent-teal/50"
                                 style={{
-                                    animationDelay: `${index * 100}ms`,
+                                    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
+                                    animationDelay: `${index * 50}ms`,
                                 }}
                             >
-                                {/* Background gradient */}
-                                <div
-                                    className={`absolute inset-0 bg-gradient-to-br ${colors.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                                />
-
-                                {/* Content */}
-                                <div className="relative z-10">
-                                    {/* Icon */}
-                                    <div className="mb-6 inline-flex p-4 rounded-xl bg-background-tertiary border border-border-subtle group-hover:border-accent-teal/30 transition-colors">
-                                        <IconComponent className="w-8 h-8 text-accent-teal" />
+                                {/* Icon + Title inline */}
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="p-2 rounded-lg bg-background-elevated border border-border-subtle group-hover:border-accent-teal/30 transition-colors">
+                                        <IconComponent className="w-5 h-5 text-accent-teal" />
                                     </div>
-
-                                    {/* Title */}
-                                    <h3 className="font-display text-2xl font-semibold mb-3">
+                                    <h3 className="font-display text-lg font-semibold text-white">
                                         {interest.title}
                                     </h3>
-
-                                    {/* Description */}
-                                    <p className="text-text-secondary leading-relaxed">
-                                        {interest.description}
-                                    </p>
                                 </div>
+
+                                {/* Description */}
+                                <p className="text-text-secondary text-sm leading-relaxed">
+                                    {interest.description}
+                                </p>
                             </article>
                         );
                     })}
