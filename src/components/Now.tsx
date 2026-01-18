@@ -70,24 +70,6 @@ export default function Now() {
                             </div>
                         </div>
 
-                        {/* Learning */}
-                        <div className="mb-8">
-                            <h3 className="font-display text-xl font-semibold mb-4">
-                                📚 Learning
-                            </h3>
-                            <ul className="space-y-2">
-                                {nowContent.learning.map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="flex items-start gap-3 text-text-secondary"
-                                    >
-                                        <span className="text-accent-teal mt-1">→</span>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
                     </div>
                 </div>
             </div>
