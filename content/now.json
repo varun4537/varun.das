@@ -8,8 +8,8 @@
             "image": "/projects/Savor.jpeg"
         },
         {
-            "title": "Bookmark Organizer",
-            "description": "A cross-platform tool to organize saved content for easier learning and discovery.",
+            "title": "MyShelf",
+            "description": "MyShelf is a mobile-first web app for building a digital replica of your physical book collection. Scan ISBN barcodes or add books manually, track your reading progress, and view statistics about your library.",
             "githubUrl": "https://github.com/varun4537/MyShelf",
             "liveUrl": "https://my-shelf-beryl.vercel.app/",
             "image": "/projects/MyShelf.png"
