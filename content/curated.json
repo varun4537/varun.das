@@ -1,6 +1,31 @@
 {
     "weeks": [
         {
+            "weekOf": "January 19, 2026",
+            "items": [
+                {
+                    "title": "The AI Revolution Is Here",
+                    "url": "https://post.substack.com/p/the-ai-revolution-is-here-will-the",
+                    "type": "article",
+                    "topics": [
+                        "AI",
+                        "Economics"
+                    ],
+                    "commentary": "A debate on the future of AI and the economy."
+                },
+                {
+                    "title": "Many Small Steps for Robots",
+                    "url": "https://www.notboring.co/p/robot-steps",
+                    "type": "article",
+                    "topics": [
+                        "Robotics",
+                        "AI"
+                    ],
+                    "commentary": "One giant leap for mankind."
+                }
+            ]
+        },
+        {
             "weekOf": "January 6, 2026",
             "items": [
                 {

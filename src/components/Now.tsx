@@ -1,6 +1,7 @@
 'use client';
 
 import { Sparkles, Clock, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import nowContent from '@/../content/now.json';
 
 // Content is loaded from content/now.json - edit that file to update this section
@@ -51,20 +52,35 @@ export default function Now() {
                                 {nowContent.building.map((item) => (
                                     <a
                                         key={item.title}
-                                        href={item.githubUrl}
+                                        href={(item as any).liveUrl || item.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="block p-4 bg-background-tertiary/50 rounded-lg border border-border-subtle hover:border-accent-teal/50 transition-all duration-300 group"
                                     >
-                                        <div className="flex items-start justify-between">
-                                            <h4 className="font-semibold text-text-primary mb-1 group-hover:text-accent-teal transition-colors">
-                                                {item.title}
-                                            </h4>
-                                            <ExternalLink className="w-4 h-4 text-text-tertiary group-hover:text-accent-teal transition-colors" />
+                                        <div className="flex gap-5 items-start">
+                                            {(item as any).image && (
+                                                <div className="relative w-32 aspect-video flex-shrink-0 overflow-hidden rounded-md border border-white/10 mt-1">
+                                                    <Image
+                                                        src={(item as any).image}
+                                                        alt={item.title}
+                                                        fill
+                                                        className="object-cover"
+                                                        sizes="128px"
+                                                    />
+                                                </div>
+                                            )}
+                                            <div className="flex-grow">
+                                                <div className="flex items-start justify-between">
+                                                    <h4 className="font-semibold text-text-primary mb-1 group-hover:text-accent-teal transition-colors">
+                                                        {item.title}
+                                                    </h4>
+                                                    <ExternalLink className="w-4 h-4 text-text-tertiary group-hover:text-accent-teal transition-colors" />
+                                                </div>
+                                                <p className="text-text-secondary text-sm">
+                                                    {item.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <p className="text-text-secondary text-sm">
-                                            {item.description}
-                                        </p>
                                     </a>
                                 ))}
                             </div>
