@@ -7,10 +7,12 @@ import Blog from '@/components/Blog';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { Scene } from '@/components/canvas/Scene';
 
 export default function Home() {
   return (
     <>
+      <Scene />
       <Navigation />
       <main id="main-content">
         <Hero />
