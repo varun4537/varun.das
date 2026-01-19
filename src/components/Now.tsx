@@ -46,7 +46,7 @@ export default function Now() {
                         <div className="mb-8">
                             <h3 className="font-display text-xl font-semibold mb-4 flex items-center gap-2">
                                 <Sparkles className="w-5 h-5 text-accent-teal" aria-hidden="true" />
-                                Building
+                                Currently Working On
                             </h3>
                             <div className="space-y-4">
                                 {nowContent.building.map((item) => (

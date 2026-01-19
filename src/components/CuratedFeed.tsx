@@ -28,7 +28,7 @@ export default function CuratedFeed() {
                     {/* Section header */}
                     <div className="mb-12 text-center">
                         <span className="font-mono text-xs uppercase tracking-widest text-accent-coral mb-2 block">
-                            What I&apos;m Into
+                            Rabbit Holes
                         </span>
                         <h2 className="font-display text-[3.1rem] md:text-[4.4rem] lg:text-[5.6rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                             Recent Reads

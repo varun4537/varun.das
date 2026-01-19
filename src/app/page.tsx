@@ -16,8 +16,8 @@ export default function Home() {
       <Navigation />
       <main id="main-content">
         <Hero />
-        <Now />
         <Projects />
+        <Now />
         <CuratedFeed />
         <Blog />
         <About />

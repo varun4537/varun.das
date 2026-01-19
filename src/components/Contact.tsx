@@ -56,7 +56,7 @@ export default function Contact() {
                     {/* Section header */}
                     <div className="mb-12 text-center">
                         <span className="font-mono text-xs uppercase tracking-widest text-accent-teal mb-2 block">
-                            Say Hello
+                            Let&apos;s Connect
                         </span>
                         <h2 className="font-display text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-bold mb-6 text-white drop-shadow-lg tracking-[-0.02em] leading-none">
                             Get in Touch

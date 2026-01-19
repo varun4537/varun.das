@@ -32,9 +32,9 @@ const socialLinks = [
 
 export default function Hero() {
     const scrollToNext = () => {
-        const nowSection = document.getElementById('now');
-        if (nowSection) {
-            nowSection.scrollIntoView({ behavior: 'smooth' });
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
