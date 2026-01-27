@@ -21,19 +21,19 @@ export function Voyager({ scrollProgress }: VoyagerProps) {
         if (!groupRef.current) return;
 
         // Mouse tracking rotation - INCREASED SENSITIVITY
-        targetRotation.current.y = state.pointer.x * 1.2;  // was 0.5
-        targetRotation.current.x = -state.pointer.y * 0.8; // was 0.3
+        targetRotation.current.y = state.pointer.x * 3.0;  // significantly increased from 1.2
+        targetRotation.current.x = -state.pointer.y * 2.0; // significantly increased from 0.8
 
         // Smooth interpolation (lerp) - FASTER RESPONSE
         groupRef.current.rotation.y = THREE.MathUtils.lerp(
             groupRef.current.rotation.y,
             targetRotation.current.y,
-            0.12  // was 0.05
+            0.2  // increased from 0.12 for snappier response
         );
         groupRef.current.rotation.x = THREE.MathUtils.lerp(
             groupRef.current.rotation.x,
             targetRotation.current.x,
-            0.12  // was 0.05
+            0.2  // increased from 0.12 for snappier response
         );
 
         // Slow self-rotation
