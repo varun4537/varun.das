@@ -1,6 +1,21 @@
 {
     "weeks": [
         {
+            "weekOf": "January 26, 2026",
+            "items": [
+                {
+                    "title": "The Gaslighting of Parasite",
+                    "url": "https://marginalrevolution.com/marginalrevolution/2020/06/the-gaslighting-of-parasite.html",
+                    "type": "article",
+                    "topics": [
+                        "Movies",
+                        "Economics"
+                    ],
+                    "commentary": "A contrarian take on the movie Parasite."
+                }
+            ]
+        },
+        {
             "weekOf": "January 19, 2026",
             "items": [
                 {
