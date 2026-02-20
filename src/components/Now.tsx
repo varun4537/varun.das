@@ -10,9 +10,12 @@ export default function Now() {
     return (
         <section id="now" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32 bg-[#0a0a0a]">
             {/* Background image - full bleed */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/now-bg.png)' }}
+            <Image
+                src="/now-bg.png"
+                alt="Now Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-background-primary/80" />

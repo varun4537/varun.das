@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Calendar, ArrowUpRight } from 'lucide-react';
 
 interface BlogPost {
@@ -91,9 +92,12 @@ export default function Blog() {
     return (
         <section id="blog" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
             {/* Background image - full bleed */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/blog-bg.png)' }}
+            <Image
+                src="/blog-bg.png"
+                alt="Blog Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             <div className="absolute inset-0 bg-background-primary/80" />
 

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { MapPin, Coffee } from 'lucide-react';
 import aboutFacts from '@/../content/about-facts.json';
 
@@ -9,9 +10,12 @@ export default function About() {
     return (
         <section id="about" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
             {/* Background image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/about-bg.png)' }}
+            <Image
+                src="/about-bg.png"
+                alt="About Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             <div className="absolute inset-0 bg-background-primary/85" />
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -45,9 +46,12 @@ export default function Contact() {
     return (
         <section id="contact" className="relative overflow-hidden py-20 md:py-32">
             {/* Background image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/contact-bg.png)' }}
+            <Image
+                src="/contact-bg.png"
+                alt="Contact Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             <div className="absolute inset-0 bg-background-primary/80" />
 

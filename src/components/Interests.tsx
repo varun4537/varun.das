@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Code2, Camera, Telescope, ShoppingCart, Rocket, Brain, Lightbulb, Landmark, BookOpen, LucideIcon } from 'lucide-react';
 import interestsContent from '@/../content/interests.json';
 
@@ -12,9 +13,12 @@ export default function Interests() {
     return (
         <section id="interests" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
             {/* Background image - full bleed */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/interests-bg.png)' }}
+            <Image
+                src="/interests-bg.png"
+                alt="Interests Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             <div className="absolute inset-0 bg-background-primary/70" />
 

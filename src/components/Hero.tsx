@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Github, Linkedin, Instagram, BookOpen, Film, ArrowDown } from 'lucide-react';
 
 const socialLinks = [
@@ -41,9 +42,13 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 overflow-hidden">
             {/* Background image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/hero-bg.png)' }}
+            <Image
+                src="/hero-bg.png"
+                alt="Hero Background"
+                fill
+                priority
+                className="object-cover"
+                quality={85}
             />
 
             {/* Dark overlay for text readability */}

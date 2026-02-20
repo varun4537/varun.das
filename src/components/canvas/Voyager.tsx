@@ -11,7 +11,8 @@ interface VoyagerProps {
 
 export function Voyager({ scrollProgress }: VoyagerProps) {
     const groupRef = useRef<THREE.Group>(null);
-    const { scene } = useGLTF('/models/voyager.glb');
+    // Using the highly compressed version (~197KB vs original 1.7MB)
+    const { scene } = useGLTF('/models/voyager.compressed2.glb', true);
     const { viewport } = useThree();
 
     // Target rotation based on mouse
@@ -66,4 +67,4 @@ export function Voyager({ scrollProgress }: VoyagerProps) {
 }
 
 // Preload the model
-useGLTF.preload('/models/voyager.glb');
+useGLTF.preload('/models/voyager.compressed2.glb', true);

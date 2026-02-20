@@ -72,9 +72,12 @@ export default function Projects() {
     return (
         <section id="projects" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
             {/* Background image - full bleed */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/projects-bg.png)' }}
+            <Image
+                src="/projects-bg.png"
+                alt="Projects Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             <div className="absolute inset-0 bg-background-primary/75" />
 

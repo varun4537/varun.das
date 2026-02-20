@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link2, Video, Wrench, Calendar, ArrowRight, LucideIcon } from 'lucide-react';
 import curatedContent from '@/../content/curated.json';
 
@@ -17,9 +18,12 @@ export default function CuratedFeed() {
     return (
         <section id="curated" className="relative overflow-hidden min-h-screen w-full flex items-center py-20 md:py-32">
             {/* Background image - full bleed */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/curated-bg.png)' }}
+            <Image
+                src="/curated-bg.png"
+                alt="Curated Feed Background"
+                fill
+                className="object-cover"
+                quality={85}
             />
             <div className="absolute inset-0 bg-background-primary/75" />
 
